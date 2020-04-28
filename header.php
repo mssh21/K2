@@ -44,6 +44,13 @@
 		</div>
 	</div>
 	<?php endwhile; ?>
+			<?php else: ?>
+	<div id="mainVisual" class="top-mainVisual">
+		<div class="innner">
+			<h1><?php bloginfo( 'name' ); ?></h1>
+			<div class="mv_description"><?php bloginfo( 'description' ); ?></div>
+		</div>
+	</div>
 	<?php endif; ?>
 	<?php wp_reset_postdata(); ?>
 	<?php else: ?>
@@ -52,7 +59,7 @@
 			<?php if(has_custom_logo()): ?>
 			<<?php if(is_home()): ?>h1<?php else: ?>div<?php endif; ?> class="site-title"><?php the_custom_logo(); ?></<?php if(is_home()): ?>h1<?php else: ?>div<?php endif; ?>>
 			<?php else: ?>
-			<<?php if(is_home()): ?>h1<?php else: ?>div<?php endif; ?>><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></<?php if(is_home()): ?>h1<?php else: ?>div<?php endif; ?>>
+			<<?php if(is_home()): ?>h1<?php else: ?>div<?php endif; ?> class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></<?php if(is_home()): ?>h1<?php else: ?>div<?php endif; ?>>
 			<?php endif; ?>
 		</div>
 		<div id="spHead" class="sp">
