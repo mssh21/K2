@@ -44,7 +44,7 @@
 		</div>
 	</div>
 	<?php endwhile; ?>
-			<?php else: ?>
+	<?php else: ?>
 	<div id="mainVisual" class="top-mainVisual">
 		<div class="innner">
 			<h1><?php bloginfo( 'name' ); ?></h1>
@@ -57,9 +57,9 @@
 	<header id="masthead" class="site-header">
 		<div class="pc">
 			<?php if(has_custom_logo()): ?>
-			<<?php if(is_home()): ?>h1<?php else: ?>div<?php endif; ?> class="site-title"><?php the_custom_logo(); ?></<?php if(is_home()): ?>h1<?php else: ?>div<?php endif; ?>>
+			<div class="site-title"><?php the_custom_logo(); ?></div>
 			<?php else: ?>
-			<<?php if(is_home()): ?>h1<?php else: ?>div<?php endif; ?> class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></<?php if(is_home()): ?>h1<?php else: ?>div<?php endif; ?>>
+			<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
 			<?php endif; ?>
 		</div>
 		<div id="spHead" class="sp">
