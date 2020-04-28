@@ -39,8 +39,8 @@
 	?>
 	<div id="mainVisual" class="top-mainVisual" <?php if($mv_background): ?>style="background-image:url(<?php echo $mv_background; ?>)"<?php endif; ?>>
 		<div class="innner">
-			<?php if($mv_logo): ?><h1><img src="<?php echo $mv_logo; ?>" alt="<?php bloginfo( 'name' ); ?>"></h1><?php endif; ?>
-			<?php if($mv_description): ?><div class="mv_description"><?php echo $mv_description; ?></div><?php endif; ?>
+			<h1><?php if($mv_logo): ?><img src="<?php echo $mv_logo; ?>" alt="<?php bloginfo( 'name' ); ?>"><?php else: ?><<?php bloginfo( 'name' ); ?><?php endif; ?></h1>
+			<div class="mv_description"><?php if($mv_description): ?><?php echo $mv_description; ?><?php else: ?><?php bloginfo( 'description' ); ?><?php endif; ?></div>
 		</div>
 	</div>
 	<?php endwhile; ?>
